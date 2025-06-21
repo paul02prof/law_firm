@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #f9f9f9;
+  color: #fff;
+}
+
+header {
+  background-color: #002b45;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  font-size: 14px;
+  background-color: #FFF7DF;
+  color: #002b45;
+}
+
+.langues span {
+  margin-right: 10px;
+  cursor: pointer;
+  height:20px;
+}
+
+.langues .active {
+  font-weight: bold;
+  background-color: ;
+
+}
+
+.topbar .infos span {
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: transparent; /* <-- rend le fond transparent */
+  position: absolute; /* <-- la place au-dessus du fond */
+  top: 50px; /* distance depuis le haut (tu peux ajuster) */
+  left: 0;
+  right: 0;
+  z-index: 10; /* au-dessus du fond */
+  height:40px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.main-nav .logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.main-nav .logo span {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.right-links{
+ font-family: 'Georgia', serif;
+}
+
+.hero {
+  padding: 80px 50px;
+  background-image: url("img/law_bg.png"); /* ou background.jpg */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+   z-index: 1;
+}
+
+.hero .slogan,
+.hero .engagements,
+.hero .image-note {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero .slogan {
+  font-size: 85px;
+  line-height: 1.2;
+
+  margin-bottom: 30px;
+  color: white;
+}
+
+.slogan em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.slash {
+  color: #00c8f0;
+  font-size: 80px;
+  line-height: 0.5;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.engagements {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  color: #002b45;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.engagements .icon {
+  margin-right: 10px;
+}
+
+.image-note {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ccc;
+}
