@@ -83,8 +83,6 @@ header {
   background-repeat: no-repeat;
   color: white;
   position: relative;
-  height:100%;
-  width:100%;
 }
 
 .hero::before {
@@ -105,7 +103,7 @@ header {
 .hero .slogan {
   font-size: 85px;
   line-height: 1.2;
-  margin-top:10px;
+
   margin-bottom: 30px;
   color: white;
 }
@@ -145,8 +143,8 @@ header {
 
 .bg_carousel{
     position: absolute;
-    width:1900px;
-    height:900px;
+    width:2100px;
+    height:1000px;
 
 
 
@@ -391,7 +389,6 @@ header {
     font-family: monospace;
     border: 1px solid #5555;
     font-size: large;
-    top:5%;
     bottom: 20%;
     left: 10%;
 }
@@ -399,7 +396,22 @@ header {
     left: unset;
     right: 10%;
 }
-
+#back{
+    position: absolute;
+    z-index: 50;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-bottom: 1px solid #555;
+    font-family: Poppins;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: transparent;
+    padding: 10px;
+    /* opacity: 0; */
+    transition: opacity 0.5s;
+}
 
 
 /* About us*/
