@@ -148,7 +148,7 @@ header {
 .bg_carousel{
     position: relative;
     width:1400px;
-    height:820px;
+    height:740px;
 
 
 
@@ -364,7 +364,7 @@ header {
 
 .arrows{
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     width: 1140px;
     max-width: 90%;
     display: flex;
