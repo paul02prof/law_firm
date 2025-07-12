@@ -75,14 +75,16 @@ header {
 }
 
 .hero {
-  padding: 80px 50px;
+  padding: 50px 50px 0px 50px;
   background-image: url("img/law_bg.png"); /* ou background.jpg */
-  background-attachment: fixed;
+ /* background-attachment: fixed;*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   position: relative;
+  width: 1616px;
+    height: 708px;
 }
 
 .hero::before {
@@ -101,9 +103,9 @@ header {
 
 
 .hero .slogan {
-  font-size: 85px;
+  font-size: 95px;
   line-height: 1.2;
-  margin-top:10px
+  margin-top:60px;
   margin-bottom: 30px;
   color: white;
 }
@@ -131,6 +133,8 @@ header {
   text-decoration: none;
   font-weight: bold;
   margin-top: 40px;
+    margin-left: 30px;
+    font-size: 20px;
 }
 
 .engagements .icon {
@@ -142,14 +146,14 @@ header {
 /* carousel */
 
 .bg_carousel{
-    position: absolute;
-    width:2100px;
-    height:1000px;
+    position: relative;
+    width:1400px;
+    height:820px;
 
 
 
-    left: 35%;
-    top:5%;
+    left: 45%;
+    top:0%;
     transform: translateX(-50%);
     background-image: url('img/carousel-bg.jpg');
    
@@ -165,9 +169,9 @@ header {
 
 .carousel{
     position: relative;
-    height: 700px;
-    overflow: hidden;
-    margin-top: -5px;
+    height: 800px;
+
+    margin-top: 15px;
     padding: 0px 0px;
 
 }
@@ -175,7 +179,7 @@ header {
 
 .carousel .list{
     position: absolute;
-    width: 1140px;
+    width: 700px;
     max-width: 90%;
     height: 90%;
     left: 50%;
@@ -183,7 +187,7 @@ header {
 }
 .carousel .list .item{
     position: absolute;
-    left: 0%;
+    left: -35%;
     width: 70%;
     height: 100%;
     font-size: 15px;
@@ -197,11 +201,11 @@ header {
     transform: translateX(0);
 }
 .carousel .list .item img{
-    width: 50%;
+    width: 80%;
     position: relative;
     right: 10px;
-    left:70%;
-
+    left:110%;
+    height: 80%;
     top: 50%;
     transform: translateY(-50%);
     transition: right 1.5s;
@@ -217,7 +221,7 @@ header {
     pointer-events: auto;
     width: 600px;
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform:  translateY(-50%);
     transition: opacity 0.5s;
 }
