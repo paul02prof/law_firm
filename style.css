@@ -215,9 +215,9 @@ header {
 .carousel .list .item:nth-child(2) .introduce{
     opacity: 1;
     pointer-events: auto;
-    width: 400px;
+    width: 600px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform:  translateY(-50%);
     transition: opacity 0.5s;
 }
@@ -235,7 +235,7 @@ header {
 .carousel .list .item .introduce .topic{
   font-family: 'Georgia', serif;
   font-style: italic;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 500;
     color:black;
 }
@@ -244,20 +244,7 @@ header {
     font-size: medium;
     color: #5559;
 }
-.carousel .list .item .introduce .seeMore{
-    font-family: Poppins;
-    margin-top: 1.2em;
-    padding: 5px 0;
-    border: none;
-    border-bottom: 1px solid #555;
-    background-color: transparent;
-    font-weight: bold;
-    letter-spacing: 3px;
-    transition: background 0.5s;
-}
-.carousel .list .item .introduce .seeMore:hover{
-    background: #eee;
-}
+
 .carousel .list .item:nth-child(1){
     transform: var(--item1-transform);
     filter: var(--item1-filter);

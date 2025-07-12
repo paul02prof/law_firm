@@ -5,8 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Firm Law</title>
   <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@4.10.2"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+    .modal {
+      @apply fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50;
+    }
 
+    .modal.show {
+      @apply flex;
+    }
+
+    .modal-content {
+      @apply bg-white rounded-2xl shadow-2xl p-8 w-full max-w-2xl transform transition-all duration-300 scale-95 opacity-0;
+    }
+
+    .modal.show .modal-content {
+      @apply scale-100 opacity-100;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -31,9 +49,11 @@
       <span class="slash">/</span><em>une justice</em><br>
       pour tous.
     </p>
-    <a href="#" class="engagements">
-      <span class="icon">✔️</span> Découvrez nos engagements
-    </a>
+
+ <a href="#" class="engagements"><button id="openModal" class="  bg-white text-yellow-700  rounded-[30px] ">
+    Contactez nous
+ </button></a>
+
     <p class="image-note"> </p>
   </main>
 
@@ -49,7 +69,10 @@
                         <!-- 20 lorem -->
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl.
 </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
+                    <a href="#" class="engagements"><button id="openModal" class="  bg-white text-yellow-700  rounded-[30px] ">
+    Contactez nous
+ </button></a>
+
                 </div>
             </div>
           <div class="item">
@@ -63,19 +86,46 @@
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl.
 
                          </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
+                    <a href="#" class="engagements"><button id="openModal" class="  bg-white text-yellow-700  rounded-[30px] ">
+    Contactez nous
+ </button></a>
+
                 </div>
             </div>
           <div class="item">
                 <img src="img/img3.png" style="margin-left: 200px;">
                 <div class="introduce" >
-                    <div class="title">Experts des domaines du:</div>
+
                     <div class="topic">Droit du travail</div>
                     <div class="des">
-                        <!-- 20 lorem -->
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl.
- </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
+
+                        <p ><em style="color: black; font-size: 20px;">Services juridiques pour sociétés commerciales - Expertise OHADA</em> <br>
+
+Le droit des affaires a pour objet l'étude des règles qui gouvernent les sociétés commerciales. Ces règles sont rigoureusement encadrés par l'Acte Uniforme OHADA ( Organisation pour l'harmonisation en Afrique du Droit des Affaires) qui harmonise les règles juridiques applicables aux sociétés commerciales. En tant que cabinet d'avocats spécialisé en droit des affaires, nous offrons des solutions juridiques personnalisées et complètes aux sociétés commerciales opérant dans l'espace OHADA.
+                        </p><br>
+                        <p>
+                            <em style="color: black; font-size: 20px;">Nos domaines d'expertise</em>
+                            <ul class="list-disc pl-6">
+                        <li>Droit des sociétés et gouvernance d'entreprise</li>
+<li>Droit des contrats commerciaux et internationaux</li>
+<li>Droit de la concurrence et de la consommation</li>
+<li>Règlement des différends et arbitrage</li>
+                    </ul><br>
+                        <em style="color: black; font-size: 20px;">Comment pouvons-nous vous aider ?</em>
+                         <ul class="list-disc pl-6">
+                        <li>Création et restructuration de sociétés : conseils stratégiques</li>
+<li>Négociation et rédaction de contrats : protection de vos intérêts</li>
+<li>Résolution de litiges commerciaux : arbitrage et médiation</li>
+<li>Conformité réglementaire et gestion des risques : audits et conseils</li>
+                              </ul>
+                        </p>
+
+
+                        </div>
+                    <a href="#" class="engagements"><button id="openModal" class="  bg-white text-yellow-700  rounded-[30px] ">
+    Contactez nous
+ </button></a>
+
                 </div>
             </div>
             <div class="item">
@@ -87,7 +137,10 @@
                         <!-- 20 lorem -->
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl.
 </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
+                  <a href="#" class="engagements"><button id="openModal" class="  bg-white text-yellow-700  rounded-[30px] ">
+    Contactez nous
+ </button></a>
+
                 </div>
             </div>
             <div class="item">
@@ -99,7 +152,10 @@
                         <!-- 20 lorem -->
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl.
 </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
+                    <a href="#" class="engagements"><button id="openModal" class="  bg-white text-yellow-700  rounded-[30px] ">
+    Contactez nous
+ </button></a>
+
                 </div>
             </div>
 
@@ -147,6 +203,56 @@
             </div>
         </div>
     </div>
+
+ <!-- ✅ Modal -->
+
+ <div id="modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+
+        <div class="bg-white w-[500px] h-[600px] rounded-[30px] flex shadow-xl overflow-hidden relative">
+
+
+
+        <!-- Left panel -->
+        <div class="w-full p-10 flex flex-col justify-between bg-blue-100 ">
+          <div>
+
+            <h2 class="text-2xl font-bold text-blue-600 mb-1">Contactez nous</h2><br>
+
+              <button type="submit" class="w-full bg-green-700 text-white  py-2 rounded-full font-semibold hover:bg-green-800 transition">
+
+                Whatsapp
+              </button>
+
+              <button type="submit" class="w-full bg-blue-100 text-black  py-2 rounded-full font-extrabold "><br>
+                  OU
+              </button>
+
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-10 pt-8">
+              <input type="email" placeholder=" Votre email" required class="w-full px-4 py-3 rounded-full bg-white border border-gray-300 text-black focus:outline"/>
+              <div class="relative">
+                <textarea name="message" placeholder="votre message" required class="w-full p-3 border border-gray-300 rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+               </div>
+                <p id="create-error" class="text-red-600 mt-0 text-sm font-bold hidden"></p>
+              <button type="submit" class="w-full bg-yellow-400 text-white  py-2 rounded-full font-semibold hover:bg-yellow-500 transition">
+                Submit
+              </button>
+
+
+            </form>
+
+
+
+          </div>
+        </div>
+
+            <!-- Button Close -->
+        <button onclick="document.getElementById('modal').classList.add('hidden')" class="absolute top-4 right-4 bg-white w-8 h-8 rounded-full text-gray-600 text-xl flex items-center justify-center hover:bg-red-700 hover:text-white">
+          ×
+        </button>
+      </div>
+    </div>
+
+
    <footer>
         <div class="footer-container">
             <div class="contact-social-line">
@@ -171,7 +277,21 @@
             </div>
         </div>
     </footer>
+  <!-- ✅ Script to open modal -->
+<script>
+    const modal = document.getElementById("modal");
+    const openBtn = document.getElementById("openModal");
+    const closeBtn = document.getElementById("closeModal");
 
+    openBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+  </script>
   <script src="index.js"></script>
 </body>
 </html>
