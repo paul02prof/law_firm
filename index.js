@@ -29,7 +29,7 @@ const showSlider = (type) => {
     unAcceppClick = setTimeout(()=>{
         nextButton.style.pointerEvents = 'auto';
         prevButton.style.pointerEvents = 'auto';
-    }, 2000)
+    }, 800)
 }
 seeMoreButtons.forEach((button) => {
     button.onclick = function(){
@@ -37,6 +37,38 @@ seeMoreButtons.forEach((button) => {
         carousel.classList.add('showDetail');
     }
 });
-backButton.onclick = function(){
+if(backButton){
+  backButton.onclick = function(){
     carousel.classList.remove('showDetail');
+  }
+}
+
+// Modal handling
+const modal = document.getElementById('modal');
+const openModalButtons = document.querySelectorAll('.open-modal');
+if(openModalButtons && modal){
+  openModalButtons.forEach(btn => {
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      modal.classList.remove('hidden');
+    });
+  });
+  // Close when clicking backdrop
+  modal.addEventListener('click', (e)=>{
+    if(e.target === modal){
+      modal.classList.add('hidden');
+    }
+  });
+  // Close with Escape
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape') modal.classList.add('hidden');
+  });
+}
+
+// Keyboard navigation for carousel
+if(nextButton && prevButton){
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'ArrowRight') showSlider('next');
+    if(e.key === 'ArrowLeft') showSlider('prev');
+  });
 }
